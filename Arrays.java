@@ -71,8 +71,7 @@ public class Arrays{
      */  
 
         // 2D Array -- Print the Transpose of A matrix
-
-        /* 
+    /*        
         int marks [] [] = {{1,2,3,4,5},{2,3,4,5,6}};
         // System.out.println(marks.length);
         int rows=marks.length;
@@ -92,7 +91,7 @@ public class Arrays{
             }
             System.out.println();
         }
-        */
+    */
 
         // Taking a matrix as an input and printing its elements.
         /*
@@ -139,7 +138,7 @@ public class Arrays{
     */
 
 //    Print the spiral order matrix as output for a given matrix of numbers.
-
+    /* 
         int n = sc.nextInt();
         int m = sc.nextInt();
         int matrix[][] = new int[n][m];
@@ -186,8 +185,60 @@ public class Arrays{
             colStart++;
             }
         }
+    */
+//    int numbers[]=getNumbers();
+//    printArray(numbers);
 
-
+    //Create a menu program 
+    ArrayList <Integer> numbers = new ArrayList<>();
+    // Scanner sc = new Scanner(System.in);
+    while(true){
+        menuProgram();
+        int choice = sc.nextInt();
+        if(choice == 1){
+            // add
+            System.out.print("Enter a number : ");
+            numbers.add(sc.nextInt());
+            System.out.println("Added");
+        }else if(choice == 2){
+            // remove
+            System.out.print("Enter a number to remove : ");
+            int temp = sc.nextInt();
+            if(numbers.contains(temp)){
+                numbers.remove(Integer.valueOf(temp));
+                System.out.println("Removed.");
+            }else{
+                System.out.println("Not Found");
+            }
+        }else if(choice == 3){
+            // display
+            System.out.print("Array List : " + " ");
+            System.out.println(numbers);
+        }else if(choice == 4){
+            System.out.println("Good Byee.");
+            break;
+        }else{
+            System.out.println("Invalid Choice");
+        }
     }
+    }
+    public static void menuProgram(){
+        System.out.println("Enter Your choice : ");
+        System.out.println("1: Add a number");
+        System.out.println("2: Remove a number");
+        System.out.println("3: Display numbers");
+        System.out.println("4: Exit");
+    }
+    /*
+    public static int [] getNumbers(){
+        return new int[]{1,2,3,4,5}; //Anonymous Array
+    }
+    public static void printArray(int numbers[]){
+        for(int i=0;i<numbers.length;i++){
+            System.out.print(numbers[i] + " ");
+        }
+    }
+    */
 }
+
 
