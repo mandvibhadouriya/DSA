@@ -23,15 +23,39 @@ public class sTRINGS{
         Original = "xyz" ; 
         result = "xyz";
     */
+   /*
         Scanner input = new Scanner(System.in);
-        String name = input.nextLine();
-        char Char = 'i';
-        for(int i=0;i<name.length();i++){
-            if(name.charAt(i)==Char){
-                
+        String original = input.nextLine();
+        String result = "";
+        for(int i=0;i<original.length();i++){
+            if(original.charAt(i)=='e'){
+                result += 'i';
+            } else {
+                result += original.charAt(i);
             }
                 
         }
-        System.out.println("Your name is " + name);
+        System.out.println("Original : " + original);
+        System.out.println("Result : " + result);
+    */
+    /*
+    Input an email from the user. You have to create a username from the email by deleting the part that comes after '@'. Display that username to the user.
+    Example : 
+    email = "apnaCollegeJava@gmail.com" ; username = "apnaCollegeJava" 
+    email = "helloWorld123@gmail.com"; username = "helloWorld123"
+    */
+        Scanner Input = new Scanner(System.in);
+        System.out.print("Enter your email : ");
+        String email = Input.nextLine();
+        String username = "";
+        for(int i=0;i<email.length();i++){
+            if(email.charAt(i)=='@'){
+                break;
+            }else{
+                username+=email.charAt(i);
+            }
+        }
+        System.out.println("Your username is : " + username);
+
     }
 }
