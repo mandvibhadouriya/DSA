@@ -1,11 +1,22 @@
 public class recursion{
     public static void main(String args[]){
-        int n = 5;
+        // int n = 5;
         // printNumbers(n);
         // addFirstNaturalNumbers(1,5,0);
-        int factorial = calculateFactorial(n);
-        System.out.println(factorial);
+        // int factorial = calculateFactorial(n);
+        // System.out.println(factorial);
+        // int a = 0;
+        // int b = 1;
+        // System.out.println(a);
+        // System.out.println(b);
+        // int n = 5;
+        // printFibSeq(a,b,n-2);
+        int x = 2;
+        int n = 5;
+        int xpown = printxPown(x,n);
+        System.out.println(xpown);
     }
+
     //Print numbers from 5 to 1
     // public static void printNumbers(int n){
     //     if(n==0) //Base Case
@@ -13,6 +24,7 @@ public class recursion{
     //     System.out.print(n + " ");
     //     printNumbers(n-1);
     // }
+
     //print numbers from 1 to 5
     // public static void printNumbers(int n){
     //     if(n>5)
@@ -20,6 +32,7 @@ public class recursion{
     //     System.out.print(n + " ");
     //     printNumbers(n+1);
     // }
+
     // Print sum of first n natural numbers
     // public static void addFirstNaturalNumbers(int i, int n, int sum){
     //     if(i==n){
@@ -38,9 +51,30 @@ public class recursion{
     //         return n * calculateFactorial(n-1);
     //     }
     // }
+
     // Print the fibonacci sequence till nth term
     // 0 1 1 2 3 5 8 13 21
+    // public static void printFibSeq(int a,int b,int n){
+    //     if(n==0)
+    //         return;
+    //     int c = a+b;
+    //     System.out.println(c);
+    //     printFibSeq(b,c,n-1);
+    // }
+
+    // Print x^n (stack height = n) x*x*x*x*x*x*x.......n times
+    public static int printxPown(int x,int n){
+        if(n==0){
+            return 1;
+        }
+        if(x==0){
+            return 0;
+        }
+        int xpown = printxPown(x,n-1);
+        int result = x * xpown;
+        return result;
+    }
+
+    // Print x^n (with stack height = logn)
     
-
-
 }
