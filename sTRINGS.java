@@ -2,6 +2,40 @@ import java.util.*;
 // import java.util.Arrays;
 public class sTRINGS{
     public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        String S = "I am Mandvi Bhadouriya";
+        // System.out.println(S.toLowerCase());
+        // System.out.println(S.replaceAll(" ","_"));
+        // String letter = "Dear <|name|>, Thanks a lot";
+        // String name = sc.nextLine();
+        // System.out.println(letter.replace("<|name|>", name));
+
+        // To detect double and triple spaces in a string
+        char ch = ' ';
+        int a = 0;
+        for(int i = 0; i<S.length();i++){
+            if(S.charAt(i) == ch){
+                a  += 1;
+            }
+        }
+        switch(a){
+            case 2:
+                System.out.println("Double Spaces Present");
+                break;
+            case 3:
+                System.out.println("Triple Spaces Present");
+                break;
+            default:
+                System.out.println("Either no space or more than 3 spaces present");
+                break;
+        }
+        System.out.println(a);
+
+        // format the following string
+        String letter = "Dear Harry,\nThis Java Course is nice. \nThanks";
+        System.out.println(letter);
+        
+
         // Take an array of Strings input from the user & find the cumulative (combined) length of all those strings.
         /*
         String arr[] = new String[5];
@@ -44,6 +78,7 @@ public class sTRINGS{
     email = "apnaCollegeJava@gmail.com" ; username = "apnaCollegeJava" 
     email = "helloWorld123@gmail.com"; username = "helloWorld123"
     */
+    /*
         Scanner Input = new Scanner(System.in);
         System.out.print("Enter your email : ");
         String email = Input.nextLine();
@@ -56,6 +91,6 @@ public class sTRINGS{
             }
         }
         System.out.println("Your username is : " + username);
-
+    */
     }
 }
