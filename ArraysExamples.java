@@ -1,8 +1,102 @@
 import java.util.*;
-public class Arrays{
+// import java.util.Arrays;
+public class ArraysExamples{
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
-        // int arr1[] = {1,2,3,4,5};
+        // int arr[] = {1,2,3,4,5};
+        // for(int i = arr.length-1;i>=0;i--){
+        //     System.out.print(arr[i] + " ");
+        // }
+        // for(int element : arr){
+        //     System.out.print(element + " ");
+        // }
+        /*
+        // sum of 5 float array
+        float arr1[] = {1.5f,2.5f,3.5f,4.5f,5.5f};
+        float sum = 0f;
+        for(float element : arr1){
+            sum+=element;
+        }
+        System.out.print(sum);
+        */
+       /*
+    //    a given integer is present in an array or not
+        int n = 8;
+        int arr1[] = {1,2,3,4,5};
+        boolean check = false;
+        for(int element : arr1){
+            if(element == n){
+                check = true;
+            }
+        }
+        System.out.print(check);
+        */
+
+       /*
+    //    Calculate avg of Physics class
+       int marksOfPhysics[] = {100,98,97,99,95,96,93,92,91};
+       int totalSum = 0;
+       for(int marks : marksOfPhysics){
+            totalSum +=marks;
+       }
+       int n = marksOfPhysics.length;
+       float calculatedAvg = (float)(totalSum)/n;
+       System.out.print("Total avg of Physics class is : " + calculatedAvg);
+       */
+        /*
+        // Add two matrices of size 2 * 3
+        int arr1[][] = {{2,3,4},{4,3,2}};
+        int arr2[][] = {{2,3,4},{4,3,2}};
+        int sumOfMats[][] = new int [2][3];
+        for(int i = 0;i<2;i++){
+            for(int j = 0;j<3;j++){
+                sumOfMats[i][j] = arr1[i][j] + arr2[i][j];
+            }
+        }
+        for(int i = 0;i<2;i++){
+            for(int j = 0;j<3;j++){
+                System.out.print(sumOfMats[i][j] + " ");
+            }
+            System.out.println();
+        }
+        */
+       /*
+        // Find the Maximum element of the Array
+        int arr1[] = {2,4,6,7,5,9};
+        int maxEl = 0;
+        for(int i=0;i<arr1.length;i++){
+            if(arr1[i] > maxEl){
+                maxEl = arr1[i];
+            }
+        }
+        System.out.println("Maximum element of the Array is : " + maxEl);
+        */
+        /*
+        // Find the minimum element of the Array
+        int arr1[] = {12,4,6,7,5,9};
+        int minEl = arr1[0];
+        for(int i=0;i<arr1.length;i++){
+            if(arr1[i] < minEl){
+                minEl = arr1[i];
+            }
+        }
+        System.out.println("Minimum element of the Array is : " + minEl);
+        */
+
+    //    Whether an element is sorted or not
+        int arr1[] = {9,1,2,3,4,5,6,7,8};
+        int copyForSorting [] = Arrays.copyOf(arr1,arr1.length);
+        Arrays.sort(copyForSorting);
+        if(Arrays.equals(arr1,copyForSorting) == true){
+            System.out.println("Sorted");
+        }else{
+            System.out.println("Not Sorted");
+        }
+        // System.out.println(Arrays.equals(arr1,copyForSorting));
+        // System.out.println(Arrays.toString(arr1));
+        // System.out.println(Arrays.toString(copyForSorting));
+
+
         // System.out.println("Size Of The Array..");
         // int size = sc.nextInt();
         // System.out.println("InPut Of the Array.");
@@ -189,6 +283,8 @@ public class Arrays{
 //    int numbers[]=getNumbers();
 //    printArray(numbers);
 
+/*
+
     //Create a menu program 
     ArrayList <Integer> numbers = new ArrayList<>();
     // Scanner sc = new Scanner(System.in);
@@ -229,6 +325,8 @@ public class Arrays{
         System.out.println("3: Display numbers");
         System.out.println("4: Exit");
     }
+
+    */
     /*
     public static int [] getNumbers(){
         return new int[]{1,2,3,4,5}; //Anonymous Array
@@ -239,6 +337,7 @@ public class Arrays{
         }
     }
     */
+    }
 }
 
 
