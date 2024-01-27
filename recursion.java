@@ -1,5 +1,43 @@
+import java.util.*;
 public class recursion{
+    //factorial method
+    public static int factorial(int n){
+        if(n == 1 || n == 0){
+            return 1;
+        }
+        return n * factorial(n-1);
+    }
+    //multiplication table method
+    public static void multiplicationTable(int n,int i){
+        if(i>10){
+            return;
+        }
+        System.out.println(n*i);
+        multiplicationTable(n,i+1);
+
+    }
+    // pattern method
+    public static void printPattern(int n){
+        for(int i = 1;i<n;i++){
+            for(int j = 1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    // recursive function to print the sum of first n natural numbers
+    
     public static void main(String args[]){
+
+        //factorial of a number
+        // int n = 4;
+        // System.out.println(factorial(n));
+        // multiplicationTable(4,1);
+        // printPattern(5);
+        
+
+
+
         // int n = 5;
         // printNumbers(n);
         // addFirstNaturalNumbers(1,5,0);
@@ -11,11 +49,6 @@ public class recursion{
         // System.out.println(b);
         // int n = 5;
         // printFibSeq(a,b,n-2);
-        int x = 2;
-        int n = 5;
-        int xpown = printxPown(x,n);
-        System.out.println(xpown);
-    }
 
     //Print numbers from 5 to 1
     // public static void printNumbers(int n){
@@ -61,7 +94,7 @@ public class recursion{
     //     System.out.println(c);
     //     printFibSeq(b,c,n-1);
     // }
-
+    /*
     // Print x^n (stack height = n) x*x*x*x*x*x*x.......n times
     public static int printxPown(int x,int n){
         if(n==0){
@@ -76,5 +109,11 @@ public class recursion{
     }
 
     // Print x^n (with stack height = logn)
+        int x = 2;
+            int n = 5;
+            int xpown = printxPown(x,n);
+            System.out.println(xpown);
+    */
+    }
     
 }
