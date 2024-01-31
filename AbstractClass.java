@@ -1,5 +1,8 @@
 abstract class Vehicle{
     abstract void start();
+    void song(){
+        System.out.println("Hey I'm in mood of Singing.");
+    }
 }
 class Car extends Vehicle{
     void start(){
@@ -19,10 +22,12 @@ public class AbstractClass{
         System.out.println("I'm Mandvi, the moody mandvi");
         Car obj = new Car();
         obj.start();
+        obj.song();
         Scooter obj1 = new Scooter();
         obj1.start();
         AbstractClass obj2 = new AbstractClass();
         obj2.start();
+        obj1.song();
 
     }
 }
