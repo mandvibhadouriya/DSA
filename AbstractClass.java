@@ -25,9 +25,8 @@ public class AbstractClass{
         obj.song();
         Scooter obj1 = new Scooter();
         obj1.start();
+        obj.song();
         AbstractClass obj2 = new AbstractClass();
         obj2.start();
-        obj1.song();
-
     }
 }

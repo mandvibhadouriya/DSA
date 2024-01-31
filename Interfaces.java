@@ -4,6 +4,10 @@ interface I1{
 interface I2{
     void display();
 }
+// Inheritance in Interface
+// interface I2 extends I1{
+//     void display();
+// }
 interface bicycle{
     void applyBrake(int decrement);
     void speedUp(int increment);
@@ -31,8 +35,8 @@ public class Interfaces implements I1,I2{
         Interfaces obj = new Interfaces();
         obj.show();
         obj.display();
-        AvonCycle obj1 = new AvonCycle();
-        obj1.applyBrake(2);
-        obj1.speedUp(5);
+        // AvonCycle obj1 = new AvonCycle();
+        // obj1.applyBrake(2);
+        // obj1.speedUp(5);
     }
 }
