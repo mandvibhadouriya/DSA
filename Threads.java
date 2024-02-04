@@ -56,15 +56,14 @@ class Thr1 extends Thread{
         super(name);
     }
     public void run(){
-        System.out.println("I'm Mandvi. How's you doing?");
+        System.out.println("I'm Mandvi. How's you doing? : " + Thr1.currentThread().getName());
     }
 }
+
+// Thread Priorities
 class Thr2 extends Thread{
-    Thr2(String name){
-        super(name);
-    }
     public void run(){
-        System.out.println("I'm Fine. Thank You");
+        System.out.println("I'm Mandvi. How's you doing? : " + Thr2.currentThread().getPriority());
     }
 }
 public class Threads{
@@ -92,18 +91,22 @@ public class Threads{
         // Thread Constructors
 
         Thr1 thr1 = new Thr1("Mandvi");
-        Thr2 thr2 = new Thr2("Harry");
+        Thr2 thr2 = new Thr2();
+        // Thr2 thr2 = new Thr2("Harry");
+        // thr1.setPriority(Thread.MIN_PRIORITY);
+        thr2.setPriority(Thread.MAX_PRIORITY);
         thr1.start();
         thr2.start();
-        System.out.println(thr1.getId());
-        System.out.println(thr2.getId());
-        System.out.println(thr1.getName());
-        System.out.println(thr2.getName());
-        System.out.println(thr2.activeCount()); //1
-        System.out.println(thr2.currentThread()); //Thread[main,5,main]
-        System.out.println(thr2.toString()); //Thread[Harry,5,]
-        System.out.println(thr1.getPriority()); //5
-        System.out.println(thr2.getPriority()); //5
+        // thr2.start();
+        // System.out.println(thr1.getId());
+        // System.out.println(thr2.getId());
+        // System.out.println(thr1.getName());
+        // System.out.println(thr2.getName());
+        // System.out.println(thr2.activeCount()); //1
+        // System.out.println(thr2.currentThread()); //Thread[main,5,main]
+        // System.out.println(thr2.toString()); //Thread[Harry,5,]
+        // System.out.println(thr1.getPriority()); //5
+        // System.out.println(thr2.getPriority()); //5
 
     }
 }
