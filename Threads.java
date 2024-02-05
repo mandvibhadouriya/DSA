@@ -4,6 +4,12 @@ class Thread1 extends Thread{
         while(true){ //Infinite loop
             System.out.println("I'm hungry!");
             System.out.println("Food is cooking.");
+            // Thread Methods using try and catch 
+            try {
+                Thread.sleep(455);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
         // int i = 0;
         // while(i<10000){
@@ -18,6 +24,11 @@ class Thread2 extends Thread{
         while(true){
             System.out.println("I miss you.");
             System.out.println("Online chatting.");
+            // try {
+            //     Thread.sleep(455);
+            // } catch (InterruptedException e) {
+            //     e.printStackTrace();
+            // }
         }
         // int i = 0;
         // while(i<10000){
@@ -72,10 +83,17 @@ public class Threads{
 
         // Create Threads extending Thread class
 
-        // Thread1 t1 = new Thread1();
-        // Thread2 t2 = new Thread2();
+        Thread1 t1 = new Thread1();
+        Thread2 t2 = new Thread2();
         // t1.start();
-        // t2.start();
+        // try{
+        //     t1.join();
+        // }
+        // catch(Exception e){
+        //     System.out.println(e);
+        // }
+        t1.start();
+        t2.start();
 
         // Threads using Runnable interface
 
@@ -90,13 +108,13 @@ public class Threads{
 
         // Thread Constructors
 
-        Thr1 thr1 = new Thr1("Mandvi");
-        Thr2 thr2 = new Thr2();
-        // Thr2 thr2 = new Thr2("Harry");
-        // thr1.setPriority(Thread.MIN_PRIORITY);
-        thr2.setPriority(Thread.MAX_PRIORITY);
-        thr1.start();
-        thr2.start();
+        // Thr1 thr1 = new Thr1("Mandvi");
+        // Thr2 thr2 = new Thr2();
+        // // Thr2 thr2 = new Thr2("Harry");
+        // // thr1.setPriority(Thread.MIN_PRIORITY);
+        // thr2.setPriority(Thread.MAX_PRIORITY);
+        // thr1.start();
+        // thr2.start();
         // thr2.start();
         // System.out.println(thr1.getId());
         // System.out.println(thr2.getId());
